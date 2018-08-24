@@ -7,7 +7,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-	
+	<module>crud-operations</module>
 	</modules>
 	
 </project>
