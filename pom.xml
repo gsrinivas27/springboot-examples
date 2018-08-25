@@ -7,7 +7,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
-	<module>crud-operations</module>
+	<module>person-service</module>
+	<module>education-service</module>
+	<module>job-service</module>
 	</modules>
 	
 </project>
