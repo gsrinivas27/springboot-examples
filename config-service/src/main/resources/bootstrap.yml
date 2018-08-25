@@ -1,9 +1,11 @@
 server:
   port: 9999
+  address: host.config.server
 spring:
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/gsrinivas27/springboot-examples
+          uri: https://github.com/gsrinivas27/configuration
           skip-ssl-validation: true
+         

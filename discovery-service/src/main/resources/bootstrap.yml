@@ -1,3 +1,6 @@
+server:
+  port: 8888
+  
 spring:
   application:
     name: discovery-service
@@ -5,4 +8,4 @@ spring:
   cloud:
     config:
       uri:
-      - http://localhost:9999
+      - http://host.config.server:9999

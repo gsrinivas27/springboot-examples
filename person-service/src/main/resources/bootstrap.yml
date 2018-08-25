@@ -19,4 +19,6 @@ spring:
   cloud:
     config:
       uri:
-      -  http://localhost:9999
+      -  http://host.config.server:9999
+server:
+  port: 1111
