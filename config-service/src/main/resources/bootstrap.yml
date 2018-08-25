@@ -5,4 +5,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/gsrinivas27/config-service
+          uri: https://github.com/gsrinivas27/springboot-examples
+          skip-ssl-validation: true
