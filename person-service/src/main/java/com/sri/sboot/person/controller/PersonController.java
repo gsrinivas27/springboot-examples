@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sri.sboot.person.client.EducationClient;
+import com.sri.sboot.person.model.Education;
 import com.sri.sboot.person.model.Person;
 import com.sri.sboot.person.service.PersonService;
 
@@ -17,6 +19,9 @@ public class PersonController {
 	
 	@Autowired
 	PersonService personService;
+	
+	@Autowired
+	EducationClient eduClient;
 	
 	@GetMapping("/persons")
 	public Iterable<Person> getEveryOne(){
@@ -40,5 +45,11 @@ public class PersonController {
 	@DeleteMapping("/person/{pId}")
 	public String deletePerson(@PathVariable("pId") int personId) {
 		return personService.deleteByPersonId(personId);
+	}
+	
+	@GetMapping("/person/edu/{eId}")
+	public Education getEducationById(@PathVariable("eId") int eduId) {
+		Education e = eduClient.findByEId(eduId);
+		return e;
 	}
 }
