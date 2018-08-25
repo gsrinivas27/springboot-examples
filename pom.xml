@@ -9,7 +9,7 @@
 	<modules>
 	<module>person-service</module>
 	<module>education-service</module>
-	<module>job-service</module>
+	<module>config-service</module>
 	</modules>
 	
 </project>
