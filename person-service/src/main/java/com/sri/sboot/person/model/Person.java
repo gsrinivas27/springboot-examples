@@ -1,5 +1,9 @@
 package com.sri.sboot.person.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,17 +19,22 @@ public class Person {
 	private long phno;
 	private String address;
 	
+	@Embedded
+	List<Education> education = new ArrayList<>();
 	
 	public Person() {
 		super();
 	}
-	public Person(int personId, String name, long phno, String address) {
+	
+	public Person(int personId, String name, long phno, String address, List<Education> education) {
 		super();
 		this.personId = personId;
 		this.name = name;
 		this.phno = phno;
 		this.address = address;
+		this.education = education;
 	}
+
 	public int getPersonId() {
 		return personId;
 	}
@@ -52,7 +61,8 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "Person [personId=" + personId + ", name=" + name + ", phno=" + phno + ", address=" + address + "]";
+		return "Person [personId=" + personId + ", name=" + name + ", phno=" + phno + ", address=" + address
+				+ ", education=" + education + "]";
 	}
 	
 	

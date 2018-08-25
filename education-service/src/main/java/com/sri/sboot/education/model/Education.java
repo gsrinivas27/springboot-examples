@@ -14,19 +14,37 @@ public class Education {
 	private String institute;
 	private String course;
 	private int duration;
+	private Long persionId;
 	
 	public Education() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Education(int eId, String institute, String course, int duration) {
+	
+
+	public Education(int eId, String institute, String course, int duration, Long persionId) {
 		super();
 		this.eId = eId;
 		this.institute = institute;
 		this.course = course;
 		this.duration = duration;
+		this.persionId = persionId;
 	}
+
+
+
+	public Long getPersionId() {
+		return persionId;
+	}
+
+
+
+	public void setPersionId(Long persionId) {
+		this.persionId = persionId;
+	}
+
+
 
 	public int geteId() {
 		return eId;
@@ -58,6 +76,14 @@ public class Education {
 
 	public void setDuration(int duration) {
 		this.duration = duration;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Education [eId=" + eId + ", institute=" + institute + ", course=" + course + ", duration=" + duration
+				+ ", persionId=" + persionId + "]";
 	}
 	
 	
