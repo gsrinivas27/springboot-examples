@@ -1,7 +1,8 @@
 server:
   port: 2222
 
+
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8888/eureka/
